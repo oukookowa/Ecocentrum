@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Eco-Centrum | Cleaning, Sustainability & Community</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/png" href="favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --primary:#1E7D4D;
+    --secondary:#F5F8F6;
+    --dark:#222;
+    --light:#fff;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    color:var(--dark);
+    line-height:1.7;
+    background:white;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+    z-index:1000;
+}
+
+/* Base navigation styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* The logo container adjustment */
+.logo {
+    display: flex;         /* Enables side-by-side alignment */
+    align-items: center;   /* Centers the icon and text vertically */
+    gap: 10px;             /* Adds a clean space between icon and text */
+    text-decoration: none; /* Removes default underline from the link */
+    color:var(--primary);           /* Adjust to your preferred brand color */
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* Sizing constraints for your icon */
+.logo-icon {
+    width: 32px;           /* Adjust width to fit your navbar height */
+    height: 32px;          /* Keep height matching the width */
+    object-fit: contain;   /* Prevents the image from stretching */
+}
+
+.nav-links{
+    display:flex;
+    gap:2rem;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--dark);
+    font-weight:500;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    color:white;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+    ),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:850px;
+    margin:auto;
+}
+
+.hero h1{
+    font-size:4rem;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:var(--primary);
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:2.5rem;
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.about{
+    background:var(--secondary);
+}
+
+.about-content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.contact-section{
+    background:var(--secondary);
+}
+
+.contact-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info,
+.contact-form{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:1rem;
+}
+
+.contact-form textarea{
+    resize:vertical;
+}
+
+.contact-form button{
+    width:100%;
+    border:none;
+    cursor:pointer;
+}
+
+footer{
+    background:white;
+    text-align:center;
+    padding:40px;
+}
+
+.footer-info{  
+    margin-top:20px;
+}
+
+footer p{
+    opacity:.85;
+}
+
+ul{
+    margin-left:20px;
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .contact-wrapper{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <!-- Changed to an anchor link for better web accessibility -->
+            <a href="#" class="logo">
+                <!-- Icon placed FIRST -->
+                <img src="favicon.png" alt="Eco Logo" class="logo-icon">
+                <!-- Text placed SECOND -->
+                <span class="logo-text">Eco-Centrum</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+
+<div class="container hero-content">
+
+    <h1>
+        Cleaning, Sustainability & Community Service Under One Roof
+    </h1>
+
+    <p>
+        Eco-Centrum brings together professional cleaning,
+        environmental consulting, eco-inspired apparel,
+        and healthy Swahili cuisine in Gent, Belgium.
+    </p>
+
+    <a href="#contact" class="btn">
+        Request a Free Quote
+    </a>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<div class="container">
+
+    <div class="section-title">
+        <h2>Our Services</h2>
+        <p>Four complementary business units with one mission.</p>
+    </div>
+
+    <div class="services-grid">
+
+        <div class="card">
+            <h3>🧹 Cleaning Services</h3>
+            <p>
+                Apartment cleaning, office cleaning,
+                small shop cleaning, supermarket cleaning,
+                deep cleaning and maintenance.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌱 Environmental Consulting</h3>
+            <p>
+                Sustainability reporting, environmental
+                assessments, ESG support, carbon footprinting,
+                and circular economy strategies.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>👕 Eco Apparel</h3>
+            <p>
+                Limited-edition apparel promoting
+                environmental stewardship and sustainable living.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🍲 Swahili Cuisine</h3>
+            <p>
+                Healthy Swahili meals, catering,
+                meal preparation and community food events.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<section id="about" class="about">
+
+<div class="container">
+
+    <div class="about-content">
+
+        <h2>Why Eco-Centrum?</h2>
+
+        <br>
+
+        <p>
+            We believe sustainability extends beyond environmental
+            protection. It includes healthy communities,
+            clean environments, responsible business practices,
+            and meaningful cultural experiences.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact-section">
+
+<div class="container">
+
+    <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>
+            Request a quote or ask a question.
+        </p>
+    </div>
+
+    <div class="contact-wrapper">
+
+        <div class="contact-info">
+
+            <h3>Eco-Centrum</h3>
+
+            <br>
+
+            <p><strong>Location:</strong> Gent, Belgium</p>
+
+            <p><strong>Email:</strong> info@eco-centrum.be</p>
+
+            <br>
+
+            <h4>Available Services</h4>
+
+            <ul>
+                <li>Apartment Cleaning</li>
+                <li>Office Cleaning</li>
+                <li>Shop Cleaning</li>
+                <li>Supermarket Cleaning</li>
+                <li>Environmental Consulting</li>
+                <li>Eco Apparel</li>
+                <li>Healthy Swahili Cuisine</li>
+            </ul>
+
+        </div>
+
+        <form
+            class="contact-form"
+            action="https://formspree.io/f/mlgvylyp"
+            method="POST"
+        >
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required
+            >
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+            >
+
+            <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+            >
+
+            <select name="service">
+
+                <option value="">
+                    Select Service
+                </option>
+
+                <option>Apartment Cleaning</option>
+                <option>Office Cleaning</option>
+                <option>Shop Cleaning</option>
+                <option>Supermarket Cleaning</option>
+                <option>Environmental Consulting</option>
+                <option>Eco Apparel</option>
+                <option>Swahili Cuisine</option>
+
+            </select>
+
+            <textarea
+                name="message"
+                rows="6"
+                placeholder="Tell us how we can help..."
+                required
+            ></textarea>
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="New Website Inquiry - Eco-Centrum"
+            >
+
+            <button type="submit" class="btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</section>
+
+<footer id="contact">
+
+    <h3>Eco-Centrum</h3>
+
+    <div class="footer-info">
+
+        <p>Coupure Links, 681</p>
+        <p>9000 Gent, Belgium</p>
+        <p>info@eco-centrum.be</p>
+        <p>+32 466 123 299</p>
+
+    </div>
+
+    <p style="margin-top:20px;">
+        © 2026 Eco-Centrum. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
