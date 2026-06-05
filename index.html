@@ -13,256 +13,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-
-:root{
-    --primary:#1E7D4D;
-    --secondary:#F5F8F6;
-    --dark:#222;
-    --light:#fff;
-    --shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Inter',sans-serif;
-    color:var(--dark);
-    line-height:1.7;
-    background:white;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-header{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:white;
-    box-shadow:0 2px 10px rgba(0,0,0,.05);
-    z-index:1000;
-}
-
-/* Base navigation styling */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-}
-
-/* The logo container adjustment */
-.logo {
-    display: flex;         /* Enables side-by-side alignment */
-    align-items: center;   /* Centers the icon and text vertically */
-    gap: 10px;             /* Adds a clean space between icon and text */
-    text-decoration: none; /* Removes default underline from the link */
-    color:var(--primary);           /* Adjust to your preferred brand color */
-    font-weight: bold;
-    font-size: 24px;
-}
-
-/* Sizing constraints for your icon */
-.logo-icon {
-    width: 32px;           /* Adjust width to fit your navbar height */
-    height: 32px;          /* Keep height matching the width */
-    object-fit: contain;   /* Prevents the image from stretching */
-}
-
-.nav-links{
-    display:flex;
-    gap:2rem;
-    list-style:none;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:var(--dark);
-    font-weight:500;
-}
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    text-align:center;
-    color:white;
-
-    background:
-    linear-gradient(
-        rgba(0,0,0,.55),
-        rgba(0,0,0,.55)
-    ),
-    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80");
-
-    background-size:cover;
-    background-position:center;
-}
-
-.hero-content{
-    max-width:850px;
-    margin:auto;
-}
-
-.hero h1{
-    font-size:4rem;
-    line-height:1.2;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:1.2rem;
-    margin-bottom:30px;
-}
-
-.btn{
-    display:inline-block;
-    background:var(--primary);
-    color:white;
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:50px;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-}
-
-section{
-    padding:100px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.section-title h2{
-    font-size:2.5rem;
-    color:var(--primary);
-    margin-bottom:10px;
-}
-
-.services-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:var(--shadow);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card h3{
-    color:var(--primary);
-    margin-bottom:15px;
-}
-
-.about{
-    background:var(--secondary);
-}
-
-.about-content{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-}
-
-.contact-section{
-    background:var(--secondary);
-}
-
-.contact-wrapper{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-}
-
-.contact-info,
-.contact-form{
-    background:white;
-    padding:40px;
-    border-radius:20px;
-    box-shadow:var(--shadow);
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea{
-    width:100%;
-    padding:15px;
-    margin-bottom:15px;
-    border:1px solid #ddd;
-    border-radius:10px;
-    font-size:1rem;
-}
-
-.contact-form textarea{
-    resize:vertical;
-}
-
-.contact-form button{
-    width:100%;
-    border:none;
-    cursor:pointer;
-}
-
-footer{
-    background:white;
-    text-align:center;
-    padding:40px;
-}
-
-.footer-info{  
-    margin-top:20px;
-}
-
-footer p{
-    opacity:.85;
-}
-
-ul{
-    margin-left:20px;
-}
-
-@media(max-width:768px){
-
-    .hero h1{
-        font-size:2.5rem;
-    }
-
-    .nav-links{
-        display:none;
-    }
-
-    .contact-wrapper{
-        grid-template-columns:1fr;
-    }
-
-}
-
-</style>
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -288,7 +39,7 @@ ul{
     </div>
 </header>
 
-<section class="hero">
+<section class="hero hero-home">
 
 <div class="container hero-content">
 
@@ -321,14 +72,16 @@ ul{
 
     <div class="services-grid">
 
-        <div class="card">
-            <h3>🧹 Cleaning Services</h3>
-            <p>
-                Apartment cleaning, office cleaning,
-                small shop cleaning, supermarket cleaning,
-                deep cleaning and maintenance.
-            </p>
-        </div>
+        <a href="cleaning.html" class="card-link">
+            <div class="card">
+                <h3>🧹 Cleaning Services</h3>
+                <p>
+                    Apartment cleaning, office cleaning,
+                    small shop cleaning, supermarket cleaning,
+                    deep cleaning and maintenance.
+                </p>
+            </div>
+        </a>
 
         <div class="card">
             <h3>🌱 Environmental Consulting</h3>
@@ -354,8 +107,8 @@ ul{
                 meal preparation and community food events.
             </p>
         </div>
-
     </div>
+</div>
 
 </div>
 
@@ -508,6 +261,8 @@ ul{
     </p>
 
 </footer>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>
