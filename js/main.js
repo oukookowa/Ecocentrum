@@ -19,7 +19,7 @@ function calculateEstimate(){
 
     const service = serviceElement.value;
     const hours =
-        parseFloat(hoursElement.value) || 0;
+        Math.max(0, parseFloat(hoursElement.value) || 0);
 
     let rate = 0;
 
