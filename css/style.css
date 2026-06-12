@@ -270,3 +270,77 @@ ul{
     }
 
 }
+
+/* Privacy / Terms documents */
+
+.policy-content{
+    line-height:1.9;
+}
+
+.policy-content h3{
+    color:var(--primary);
+    margin-top:40px;
+    margin-bottom:15px;
+}
+
+.policy-content p,
+.policy-content li{
+    margin-bottom:15px;
+}
+
+.policy-content ul{
+    margin-left:25px;
+}
+
+/* Hero image specifically for policy pages */
+
+.policy-hero{
+    background:
+    linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+    ),
+    url("images/privacy-hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+
+/* Terms and Privacy checkbox */
+
+.terms-checkbox {
+    margin: 5px 0 30px;
+}
+
+.checkbox-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.checkbox-line input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+    accent-color: var(--primary);
+    transform: scale(1.1);
+}
+
+.checkbox-line span {
+    color: var(--dark);
+}
+
+.checkbox-line a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.checkbox-line a:hover {
+    text-decoration: underline;
+}
