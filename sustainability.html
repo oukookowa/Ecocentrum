@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Eco-Centrum | Environmental Consulting</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/png" href="favicon.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav>
+
+<a href="index.html" class="logo">
+    <img src="favicon.png" class="logo-icon">
+    <span>Eco-Centrum</span>
+</a>
+
+<p>
+<i class="fa-solid fa-clock"></i> 8:00 - 18:00 Mon - Fri
+</p>
+
+<ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#estimate">Project Estimator</a></li>
+    <li><a href="#projects">Projects</a></li>
+</ul>
+
+</nav>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero hero-cleaning">
+
+<div class="container hero-content">
+
+<h1>Environmental Consulting for a Sustainable Future</h1>
+
+<p>
+We help organisations measure, manage and reduce their environmental impact.
+From sustainability reporting and environmental assessments to ESG strategy,
+carbon footprinting and circular economy solutions.
+</p>
+
+<a href="#estimate" class="btn">Estimate Your Project</a>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Our Environmental Consulting Services</h2>
+<p>
+Practical sustainability support for businesses, organisations and projects
+looking to improve environmental performance and prepare for the future.
+</p>
+</div>
+
+<div class="services-grid">
+
+<div class="card">
+<h3>🌱 Environmental Consulting</h3>
+<p>
+Strategic environmental advice to help identify risks, opportunities,
+compliance needs and practical improvement measures.
+</p>
+</div>
+
+<div class="card">
+<h3>📊 Sustainability Reporting</h3>
+<p>
+Support with sustainability data collection, reporting frameworks,
+performance indicators and transparent environmental communication.
+</p>
+</div>
+
+<div class="card">
+<h3>🔍 Environmental Assessments</h3>
+<p>
+Environmental reviews and assessments to identify impacts, risks,
+resource use and opportunities for improvement.
+</p>
+</div>
+
+<div class="card">
+<h3>📈 ESG Support</h3>
+<p>
+Guidance on environmental, social and governance strategies,
+ESG metrics and sustainability integration into business operations.
+</p>
+</div>
+
+<div class="card">
+<h3>☁️ Carbon Footprinting</h3>
+<p>
+Measure greenhouse gas emissions, identify key emission sources
+and develop practical carbon reduction strategies.
+</p>
+</div>
+
+<div class="card">
+<h3>♻️ Circular Economy Strategies</h3>
+<p>
+Develop strategies focused on waste reduction, material efficiency,
+reuse, recovery and more circular business models.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ESTIMATOR -->
+<section id="estimate" style="background:#F5F8F6;">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Environmental Project Budget Estimator</h2>
+<p>
+Select the type and scale of support you need to receive an indicative
+project budget. Final quotations are based on your specific requirements.
+</p>
+</div>
+
+<div class="contact-wrapper">
+
+<!-- FORM -->
+<div class="contact-form">
+
+<h3>Project Details</h3>
+
+<select id="serviceType">
+    <option value="">Select a Service</option>
+    <option value="consulting">Environmental Consulting</option>
+    <option value="reporting">Sustainability Reporting</option>
+    <option value="assessment">Environmental Assessment</option>
+    <option value="esg">ESG Support</option>
+    <option value="carbon">Carbon Footprinting</option>
+    <option value="circular">Circular Economy Strategy</option>
+</select>
+
+<select id="projectSize">
+    <option value="">Select Project Scale</option>
+    <option value="small">Small Project / Organisation</option>
+    <option value="medium">Medium Organisation</option>
+    <option value="large">Large Organisation / Complex Project</option>
+</select>
+
+<button class="btn" onclick="calculateEstimate()">
+Calculate Estimate
+</button>
+
+<h3 style="margin-top:20px;">Estimated Project Budget</h3>
+
+<div id="result" style="font-size:1.5rem;color:#1E7D4D;font-weight:700;">
+€0.00/day
+</div>
+
+<p style="font-size:0.9rem;opacity:0.7;margin-top:10px;">
+*This is an indicative estimate only. Final pricing depends on project scope,
+data availability, reporting requirements, locations and complexity.
+</p>
+
+</div>
+
+<!-- SUMMARY -->
+<div class="quote-info">
+
+<h3>What Affects Project Pricing?</h3>
+
+<ul>
+<li>Organisation size and operational complexity</li>
+<li>Number of sites or locations involved</li>
+<li>Available environmental and operational data</li>
+<li>Required reporting framework or methodology</li>
+<li>Project timeline and stakeholder involvement</li>
+<li>Level of analysis and implementation support required</li>
+</ul>
+
+<br>
+
+<h3>Why Project Costs Vary</h3>
+
+<p>
+Every organisation has different operations, supply chains and sustainability
+priorities. We tailor our approach to provide practical support based on your
+objectives, available data and required level of detail.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Selected Project Examples</h2>
+<p>
+Examples of the types of environmental and sustainability projects we support.
+</p>
+</div>
+
+<div class="services-grid">
+
+<div class="card">
+<h3>Carbon Footprint Assessment</h3>
+<p>
+<strong>Manufacturing Company</strong></p>
+<p>
+Calculated organisational emissions, identified major emission sources
+and developed a three-year carbon reduction roadmap.
+</p>
+</div>
+
+<div class="card">
+<h3>Sustainability Reporting Support</h3>
+<p>
+<strong>Property & Facilities Group</strong></p>
+<p>
+Created a sustainability data collection process and reporting structure
+covering energy, waste, water and environmental performance indicators.
+</p>
+</div>
+
+<div class="card">
+<h3>Environmental Site Assessment</h3>
+<p>
+<strong>Logistics Operator</strong></p>
+<p>
+Reviewed environmental risks across multiple operational locations and
+identified practical measures to improve resource efficiency.
+</p>
+</div>
+
+<div class="card">
+<h3>ESG Strategy Development</h3>
+<p>
+<strong>Growing SME</strong></p>
+<p>
+Developed an ESG roadmap with measurable priorities, responsibilities
+and performance indicators for long-term implementation.
+</p>
+</div>
+
+<div class="card">
+<h3>Circular Economy Opportunity Study</h3>
+<p>
+<strong>Construction Business</strong></p>
+<p>
+Analysed material flows and waste streams to identify opportunities
+for reuse, recovery and reduced material consumption.
+</p>
+</div>
+
+<div class="card">
+<h3>Energy & Resource Efficiency Review</h3>
+<p>
+<strong>Hospitality Group</strong></p>
+<p>
+Reviewed energy, water and waste consumption and recommended
+operational improvements to reduce environmental impact.
+</p>
+</div>
+
+<div class="card">
+<h3>Supply Chain Carbon Screening</h3>
+<p>
+<strong>Retail Business</strong></p>
+<p>
+Performed an initial screening of supply chain emission hotspots and
+identified priority areas for improved supplier engagement.
+</p>
+</div>
+
+<div class="card">
+<h3>Sustainability Action Plan</h3>
+<p>
+<strong>Professional Services Organisation</strong></p>
+<p>
+Created a practical sustainability action plan combining carbon reduction,
+waste prevention, procurement and employee engagement initiatives.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT CTA -->
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>Discuss Your Sustainability Project</h2>
+<p>
+Tell us about your organisation, project or environmental challenge
+and we will get back to you with the next steps.
+</p>
+</div>
+
+<form class="contact-form" action="https://formspree.io/f/mlgvylyp" method="POST">
+
+<input type="text" name="name" placeholder="Full Name" required>
+
+<input type="text" name="company" placeholder="Company / Organisation">
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="tel" name="phone" placeholder="Phone Number">
+
+<select name="service">
+    <option value="">Service of Interest</option>
+    <option value="Environmental Consulting">Environmental Consulting</option>
+    <option value="Sustainability Reporting">Sustainability Reporting</option>
+    <option value="Environmental Assessment">Environmental Assessment</option>
+    <option value="ESG Support">ESG Support</option>
+    <option value="Carbon Footprinting">Carbon Footprinting</option>
+    <option value="Circular Economy">Circular Economy Strategy</option>
+    <option value="Other">Other / General Enquiry</option>
+</select>
+
+<textarea name="message" rows="6" placeholder="Tell us about your project, sustainability goals or environmental challenges..." required></textarea>
+
+<input type="hidden" name="_subject" value="Environmental Consulting Enquiry">
+
+<div class="terms-checkbox">
+    <label class="checkbox-line">
+        <input type="checkbox" name="consent" required>
+
+        <span>
+            I agree to the
+            <a href="terms.html" target="_blank">Terms & Conditions</a>
+            and
+            <a href="privacy.html" target="_blank">Privacy Policy</a>
+        </span>
+    </label>
+</div>
+
+<button class="btn" type="submit">
+Submit Enquiry
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer id="contact">
+
+    <h3>Eco-Centrum</h3>
+
+    <div class="footer-info" style="font-size:0.8rem;">
+        <p>Coupure Links, 681</p>
+        <p>9000 Gent, Belgium</p>
+        <p>info@eco-centrum.be</p>
+        <p><strong>M:</strong> +32 466 123 299</p>
+        <p><strong>T:</strong> +32 465 337 810</p>
+
+    </div>
+
+    <p style="margin-top:20px; font-size:0.6rem;">
+        © 2026 Eco-Centrum. <strong>BTW: BE1038.024.120</strong>. All Rights Reserved.
+    </p>
+
+</footer>
+
+<script>
+function calculateEstimate() {
+
+    const service = document.getElementById("serviceType").value;
+    const projectSize = document.getElementById("projectSize").value;
+    const result = document.getElementById("result");
+
+    if (!service || !projectSize) {
+        result.innerHTML = "Please select a service and project scale";
+        return;
+    }
+
+    const prices = {
+        consulting: {
+            small: 750,
+            medium: 1800,
+            large: 4000
+        },
+        reporting: {
+            small: 1200,
+            medium: 3000,
+            large: 6500
+        },
+        assessment: {
+            small: 950,
+            medium: 2500,
+            large: 5500
+        },
+        esg: {
+            small: 1500,
+            medium: 3500,
+            large: 7500
+        },
+        carbon: {
+            small: 1000,
+            medium: 2800,
+            large: 6000
+        },
+        circular: {
+            small: 1500,
+            medium: 4000,
+            large: 8500
+        }
+    };
+
+    const estimate = prices[service][projectSize];
+
+    result.innerHTML =
+        "From €" + estimate.toLocaleString("en-BE") + " excl. VAT";
+}
+</script>
+
+</body>
+</html>
