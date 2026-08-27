@@ -384,3 +384,23 @@ ul{
     opacity: 0.7;
     cursor: not-allowed;
 }
+
+/* Styles the small "Designed by" text */
+.designer-credit {
+  font-size: 0.75rem; /* Makes the text small */
+  color: #777777;     /* Soft grey color so it doesn't distract */
+  margin-top: 5px;    /* Adds a tiny gap below the copyright */
+}
+
+/* Styles the link inside the credit */
+.designer-credit a {
+  color: #555555;
+  text-decoration: none; /* Removes the underline */
+  font-weight: bold;
+}
+
+/* Subtle hover effect for the link */
+.designer-credit a:hover {
+  text-decoration: underline;
+  color: #000000;
+}

@@ -397,59 +397,11 @@ Submit Enquiry
         © 2026 Eco-Centrum. <strong>BTW: BE1038.024.120</strong>. All Rights Reserved.
     </p>
 
+    <p class="designer-credit">Designed by <a href="https://github.com/oukookowa">Ouko Okowa</a></p>
+
 </footer>
 
-<script>
-function calculateEstimate() {
-
-    const service = document.getElementById("serviceType").value;
-    const projectSize = document.getElementById("projectSize").value;
-    const result = document.getElementById("result");
-
-    if (!service || !projectSize) {
-        result.innerHTML = "Please select a service and project scale";
-        return;
-    }
-
-    const prices = {
-        consulting: {
-            small: 750,
-            medium: 1800,
-            large: 4000
-        },
-        reporting: {
-            small: 1200,
-            medium: 3000,
-            large: 6500
-        },
-        assessment: {
-            small: 950,
-            medium: 2500,
-            large: 5500
-        },
-        esg: {
-            small: 1500,
-            medium: 3500,
-            large: 7500
-        },
-        carbon: {
-            small: 1000,
-            medium: 2800,
-            large: 6000
-        },
-        circular: {
-            small: 1500,
-            medium: 4000,
-            large: 8500
-        }
-    };
-
-    const estimate = prices[service][projectSize];
-
-    result.innerHTML =
-        "From €" + estimate.toLocaleString("en-BE") + " excl. VAT";
-}
-</script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
